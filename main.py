@@ -1,9 +1,8 @@
 import argparse
-import paramiko
-import socket
-import os
-from bruteForce import brute_force_ssh
+from bruteForceSSH import brute_force_ssh
 from portScanner import port_scanner
+from bruteFroceFacebook import brute_force_fb
+from content_bruter import content_bruter
 
 def main(attack_type):
     if attack_type == 'brute_ssh' :
@@ -16,6 +15,14 @@ def main(attack_type):
         ports = input('Ports : ')
         ports = ports.split(' ')
         port_scanner(target_ip,ports)
+    elif attack_type == 'fb':
+        # email = input('Target Email OR Username :')
+        # passwords_file = input('Passwords file (with extension) :')
+        brute_force_fb('ezzinhoussam@gmail.com','passwords.txt')
+    elif attack_type == 'web_app_bruter':
+        target_url = print('Url of the target : ')
+        wordlist_file = print('Wordlist file : ')
+        content_bruter(wordlist_file,wordlist_file)
         
 	
 

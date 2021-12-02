@@ -1,7 +1,7 @@
 # this is a spider that crawls
 # the target website in order to discover as much
 # of the web app as possible
-
+import os
 import queue
 import threading
 import urllib.error
@@ -62,14 +62,16 @@ def dir_bruter(word_queue,target_url,extensions=None):
                     print("[%d] => %s" % (response.code, url))
             except urllib.error.HTTPError as e:
                 if e.code != 404:
-                    print("!!! %d => %s " (e.code,url))
+                    print("!!! %d => %s " % (e.code,url))
                 pass
+            except KeyboardInterrupt:
+                os.exit()
 
 def content_bruter(wordlist_file,target_url):
     word_queue = build_wordlist(wordlist_file)
     file_extensions = ['.php','.bak','.orig','.inc']
     
     for i in range(threads):
-        t = threading.Thread(target=dir_bruter, args=(word_queue,target_url,file_extensions))
+        t = threading.Thread(target=dir_bruter, args=(word_queue,target_url,file_extensions,))
         t.start()
                     

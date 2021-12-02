@@ -19,10 +19,10 @@ def main(attack_type):
         # email = input('Target Email OR Username :')
         # passwords_file = input('Passwords file (with extension) :')
         brute_force_fb('ezzinhoussam@gmail.com','passwords.txt')
-    elif attack_type == 'web_app_bruter':
-        target_url = print('Url of the target : ')
-        wordlist_file = print('Wordlist file : ')
-        content_bruter(wordlist_file,wordlist_file)
+    elif attack_type == 'w':
+        target_url = input('Url of the target : ')
+        wordlist_file = input('Wordlist file : ')
+        content_bruter(wordlist_file,target_url)
         
 	
 

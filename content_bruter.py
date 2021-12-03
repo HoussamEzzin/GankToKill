@@ -7,6 +7,7 @@ import threading
 import urllib.error
 import urllib.parse
 import urllib.request
+import socket
 
 threads = 50
 resume = None
@@ -70,6 +71,7 @@ def dir_bruter(word_queue,target_url,extensions=None):
 def content_bruter(wordlist_file,target_url):
     word_queue = build_wordlist(wordlist_file)
     file_extensions = ['.php','.bak','.orig','.inc']
+
     
     for i in range(threads):
         t = threading.Thread(target=dir_bruter, args=(word_queue,target_url,file_extensions,))

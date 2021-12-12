@@ -3,6 +3,7 @@ from bruteForceSSH import brute_force_ssh
 from portScanner import port_scanner
 from bruteFroceFacebook import brute_force_fb
 from content_bruter import content_bruter
+from bruteForceGmail import brute_force_gmail
 
 def main(attack_type):
     if attack_type == 'brute_ssh' :
@@ -23,6 +24,10 @@ def main(attack_type):
         target_url = input('Url of the target : ')
         wordlist_file = input('Wordlist file : ')
         content_bruter(wordlist_file,target_url)
+    elif attack_type == 'gm':
+        target_email = input('Enter the target email :')
+        passwords_file = input('Passwords file (with extension) :')
+        brute_force_gmail(target_email,passwords_file)
         
 	
 

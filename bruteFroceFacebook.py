@@ -2,6 +2,12 @@ import requests
 from bs4 import BeautifulSoup
 import sys
 
+import coloredlogs, logging
+
+
+logger = logging.getLogger(__name__)
+coloredlogs.install(fmt='%(message)s',level='DEBUG', logger=logger)
+
 MIN_PASSWORD_LENGTH = 6
 POST_URL = 'https://facebook.com/login.php'
 HEADERS = {

@@ -1,9 +1,9 @@
 import argparse
-from bruteForceSSH import brute_force_ssh
-from portScanner import port_scanner
-from bruteFroceFacebook import brute_force_fb
-from content_bruter import content_bruter
-from bruteForceGmail import brute_force_gmail
+from attacks.servers.bruteForceSSH import brute_force_ssh
+from networking.portScanner import port_scanner
+from  attacks.social.bruteFroceFacebook import brute_force_fb
+from attacks.web.content_bruter import content_bruter
+from attacks.social.bruteForceGmail import brute_force_gmail
 
 def main(attack_type):
     if attack_type == 'brute_ssh' :

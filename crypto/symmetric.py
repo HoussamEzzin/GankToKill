@@ -1,6 +1,6 @@
 from cryptography.fernet import Fernet
 
-message = "hello world!"
+message = input('Enter your message :')
 
 key = Fernet.generate_key()
 

@@ -5,4 +5,4 @@ Package of hacking tools developed using Python3.
 
 - Add colored logs to all tools.
 - Fix bugs in content bruter, joomla killer and fb bruter
-- Add some new tools
+- Finsihs keylogger and add emails sending functionnality 

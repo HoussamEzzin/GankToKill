@@ -42,6 +42,9 @@ def dive_spreading():
 
 
 def start_drive_spreading():
+    '''
+        using threads to gain in terms of performance
+    '''
     thread = Thread(target = dive_spreading)
     thread.start()        
 

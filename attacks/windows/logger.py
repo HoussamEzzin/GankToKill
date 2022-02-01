@@ -58,4 +58,4 @@ def ScreenShot():
     pyautogui.screenshot().save(name + '.png')
 
 
-    
+print("sending data in emails...")

@@ -59,3 +59,4 @@ def ScreenShot():
 
 
 print("sending data in emails...")
+print("adding colored logs for all functions")

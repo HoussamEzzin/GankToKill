@@ -1,5 +1,5 @@
 import os
-
+#os.system('cmd /k "Your Command Prompt Command"')
 import coloredlogs, logging
 
 logger = logging.getLogger(__name__)

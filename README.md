@@ -15,4 +15,4 @@ if you need any help at all, feel free to contact me at ezzinhoussam@gmail.com
 - Fix bugs in content bruter, joomla killer and fb bruter
 - Finish keylogger and add emails sending functionnality 
 - Complete all tools
-- create a backdoor
+- Bypass CAPTCHA

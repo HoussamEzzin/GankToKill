@@ -22,8 +22,8 @@ resume = None
 
 #target specific settings 
 #gonne be changed later to get from input
-target_url = "https://www.emi.ac.ma/administrator/index.php"
-target_post = "https://www.emi.ac.ma/administrator/index.php"
+target_url = "https://"
+target_post = "https://"
 
 username_field = "username"
 password_field = "passowrd"

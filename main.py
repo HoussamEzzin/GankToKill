@@ -17,9 +17,9 @@ def main(attack_type):
         ports = ports.split(' ')
         port_scanner(target_ip,ports)
     elif attack_type == 'fb':
-        # email = input('Target Email OR Username :')
-        # passwords_file = input('Passwords file (with extension) :')
-        brute_force_fb('ezzinhoussam@gmail.com','passwords.txt')
+        email = input('Target Email OR Username :')
+        passwords_file = input('Passwords file (with extension) :')
+        brute_force_fb(email,passwords_file)
     elif attack_type == 'w':
         target_url = input('Url of the target : ')
         wordlist_file = input('Wordlist file : ')
